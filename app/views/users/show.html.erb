@@ -4,7 +4,7 @@
   <strong>Name:</strong>
   <%= @user.name %>
   <% @user.images.each do |image| %>
-    <%= image_tag url_for(image) %>
+    <%= image_tag image.variant(resize_to_limit: [100, 100]) %>
   <% end %>
 </p>
 
